@@ -1,3 +1,3 @@
 # vastmanka
 
-something examples
+something examples of vastmanka
