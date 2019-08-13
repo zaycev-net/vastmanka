@@ -1,6 +1,6 @@
 {
-  "name": "Vastmanka",
-  "version": "1.0.4",
+  "name": "vastmanka",
+  "version": "1.0.5",
   "description": "VAST player for Zaycev.net React App.",
   "main": "index.js",
   "scripts": {
