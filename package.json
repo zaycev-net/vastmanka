@@ -1,0 +1,30 @@
+{
+  "name": "vastmanka",
+  "version": "1.0.0",
+  "description": "VAST player for Zaycev.net React App.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zaycev.net FrontEnd developers",
+  "contributors": [
+    {
+      "name": "Maksim Borodulin",
+      "email": "Max.borodulin@mail.ru"
+    },
+    {
+      "name": "Anton Chernov",
+      "email": "a.chernov@zaycev.net"
+    },
+    {
+      "name": "Albert Trott",
+      "email": "a.trott@zaycev.net"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaycev-net/vastmanka.git",
+    "directory": "Frontend/Vastmanka"
+  },
+  "license": "ISC"
+}
