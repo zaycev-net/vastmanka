@@ -819,9 +819,6 @@
             this.audio = null;
             this.img = null;
 
-            console.log('we have audio!!!');
-            console.log(container);
-
             this.__private__ = {
                 hasPlayed: false
             };
@@ -847,14 +844,13 @@
                 var img;
                 var windowWidth;
 
-                console.log(mediaFiles);
-
                 if (!audioUri) {
                     return reject(new Error('There are no playable <MediaFile>s.'));
                 }
 
                 audio.src = audioUri;
                 audio.preload = 'auto';
+                self.advNode = audio;
 
                 if (mediaFiles[0].icons.length) {
                     var tempIcons = mediaFiles[0].icons.slice().reverse();
