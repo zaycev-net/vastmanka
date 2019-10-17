@@ -850,7 +850,7 @@
 
                 audio.src = audioUri;
                 audio.preload = 'auto';
-                self.advNode = audio;
+                HTMLAudio.prototype.advNode = audio;
 
                 if (mediaFiles[0].icons.length) {
                     var tempIcons = mediaFiles[0].icons.slice().reverse();
