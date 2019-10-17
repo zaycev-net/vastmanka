@@ -825,6 +825,14 @@
         }
         inherits(HTMLAudio, EventEmitter);
         Object.defineProperties(HTMLAudio.prototype, {
+            advNode: {
+                get: function() {
+                    return this.advNode;
+                },
+                set: function(element) {
+                    return this.advNode = element;
+                }
+            },
             adRemainingTime: { get: method(function getAdRemainingTime() {
                     return this.audio.duration - this.audio.currentTime;
                 }) },
