@@ -10,45 +10,6 @@ Vast-Player makes it easy to playback linear VAST creatives in the browser. It c
 * Firing VAST tracking pixels/impressions at the correct time
 * Opening VAST `<VideoClicks>` when appropriate
 
-### Example
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Vast-Player Example</title>
-        <script src="https://cdn.jsdelivr.net/npm/vast-player@latest/dist/vast-player.min.js"></script>
-        <style>
-            #container {
-                width: 640px; height: 385px;
-                position: relative;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="container"></div>
-        <script>
-            (function(VASTPlayer) {
-                'use strict';
-
-                var player = new VASTPlayer(document.getElementById('container'));
-
-                player.once('AdStopped', function() {
-                    console.log('Ad finished playback!');
-                });
-
-                player.load(
-                    'https://platform-staging.reelcontent.com/api/public/vast/2.0/tag?campaign=cam-e951792a909f17'
-                ).then(function startAd() {
-                    return player.startAd();
-                }).catch(function(reason) {
-                    setTimeout(function() { throw reason; }, 0);
-                });
-            }(window.VASTPlayer));
-        </script>
-    </body>
-</html>
-```
-
 Adding to Project
 -----------------
 ### via npm (with browserify)
@@ -62,46 +23,8 @@ Adding to Project
 2. Use the module
 
     ```javascript
-    var VASTPlayer = require('vast-player');
-    var player = new VASTPlayer(document.getElementById('container'));
-
-    player.load('https://www.myadserver.com/mytag');
-    ```
-
-### via RequireJS
-
-1. Add to RequireJS config
-
-    ```javascript
-    requirejs.config({
-        paths: {
-            VASTPlayer: 'https://cdn.jsdelivr.net/npm/vast-player@0.2/dist/vast-player.min.js'
-        }
-    });
-    ```
-
-2. Use the module
-
-    ```javascript
-    define(['VASTPlayer'], function(VASTPlayer) {
-        var player = new VASTPlayer(document.getElementById('container'));
-
-        player.load('https://www.myadserver.com/mytag');
-    });
-    ```
-
-### via a `<script>`
-
-1. Add a `<script>` to the page
-
-    ```html
-    <script src="https://cdn.jsdelivr.net/npm/vast-player@0.2/dist/vast-player.min.js"></script>
-    ```
-
-2. Use the module
-
-    ```javascript
-    var player = new window.VASTPlayer(document.getElementById('container'));
+    var vastmanka = require('vastmanka');
+    var player = new vastmanka(document.getElementById('container'));
 
     player.load('https://www.myadserver.com/mytag');
     ```
