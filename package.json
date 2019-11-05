@@ -1,11 +1,16 @@
 {
   "name": "vastmanka",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "VAST player for Zaycev.net React App.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c --compact"
   },
+  "files": [
+    "dist",
+    "lib",
+    "index.js"
+  ],
   "author": "Zaycev.net FrontEnd developers",
   "contributors": [
     "Maksim Borodulin <Max.borodulin@mail.ru>",
@@ -24,5 +29,74 @@
   "homepage": "https://github.com/zaycev-net/vastmanka",
   "keywords": [
     "vastmanka"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-proposal-do-expressions": "^7.6.0",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-proposal-function-sent": "^7.5.0",
+    "@babel/plugin-proposal-json-strings": "^7.2.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.2.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "brfs": "^1.4.3",
+    "browserify": "^13.0.0",
+    "flex-sdk": "^4.0.0-0",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-karma": "^0.12.1",
+    "grunt-mxmlc": "^0.5.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-browserify": "^5.0.1",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.4",
+    "proxyquire": "^1.7.4",
+    "proxyquire-universal": "^1.0.8",
+    "proxyquireify": "^3.1.1",
+    "watchify": "^3.7.0",
+    "rollup": "^1.25.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.3"
+  },
+  "dependencies": {
+    "browserify-versionify": "^1.0.6",
+    "lie": "^3.0.2",
+    "sort-by": "^1.1.1",
+    "vastacular": "^0.2.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-versionify"
+    ]
+  }
 }
