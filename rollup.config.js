@@ -4,12 +4,14 @@ import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
 import {terser} from "rollup-plugin-terser";
+import json from '@rollup/plugin-json';
 
 const plugins = [
     external(),
     babel({
         exclude: 'node_modules/**',
     }),
+    json(),
     builtins(),
     resolve(),
     commonjs(),
@@ -26,7 +28,8 @@ export default {
         "lie",
         "sort-by",
         "cheerio",
-        "superagent"
+        "superagent",
+        "xml2js"
     ],
     plugins,
 };
