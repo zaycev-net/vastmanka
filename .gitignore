@@ -39,3 +39,4 @@ examples/.build
 # idea config
 .idea
 
+/vastmanka.iml
