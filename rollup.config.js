@@ -28,8 +28,7 @@ export default {
         "lie",
         "sort-by",
         "cheerio",
-        "axios",
-        "xml2js"
+        "axios"
     ],
     plugins,
 };
