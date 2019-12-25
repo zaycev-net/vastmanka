@@ -1,7 +1,7 @@
-vast-player
+VASTmanka
 ===========
 
-Vast-Player makes it easy to playback linear VAST creatives in the browser. It currently supports VPAID 1.0/2.0 (JavaScript and Flash) and HTML5 `<MediaFile>`s. The library has the following responsibilites:
+VASTmanka makes it easy to playback linear VAST creatives in the browser. It currently supports VPAID 1.0/2.0 (JavaScript and Flash) and HTML5 `<MediaFile>`s. The library has the following responsibilites:
 
 * Requesting VAST ad tags
 * Resolving VAST wrapper tags
@@ -12,28 +12,27 @@ Vast-Player makes it easy to playback linear VAST creatives in the browser. It c
 
 Adding to Project
 -----------------
-### via npm (with browserify)
 
 1. Install as a dependency
 
-    ```bash
-    $> npm install vast-player --save
-    ```
+```bash
+$ yarn add vastmanka
+```
 
 2. Use the module
 
-    ```javascript
-    var vastmanka = require('vastmanka');
-    var player = new vastmanka(document.getElementById('container'));
+```javascript
+import Vastmanka from 'vastmanka';
 
-    player.load('https://www.myadserver.com/mytag');
-    ```
+const vastmanka = new Vastmanka(document.getElementById('app'));
+vastmanka.load('https://www.myadserver.com/mytag');
+```
 
 API
 ----
 
 ### main exports
-#### VASTPlayer(*container*:`Node`, *[config]*:`Object`) `extends` EventEmitter
+#### VASTmanka(*container*:`Node`, *[config]*:`Object`) `extends` EventEmitter
 * Parameters
     * **container**:`Node`: A DOM node into which the ad will be inserted. The ad will take up 100% of the width and height of the *container*.
     * *optional* **config**:`Object`: The following properties are supported
@@ -60,5 +59,5 @@ API
     * **ready**: Fired when `startAd()` may be called and the `ready` property becomes `true`.
     * **error**: Fired when an error occurs with ad loading/playback.
 
-#### VASTPlayer.vpaidSWFLocation:`String`
+#### VASTmanka.vpaidSWFLocation:`String`
 The location of the SWF needed for Flash VPAID playback. The defaults to a location on the [jsDelivr](https://www.jsdelivr.com/) CDN. Only override this property if you want to use a version of the SWF you have uploaded yourself.
