@@ -28,7 +28,7 @@ export default {
         "lie",
         "sort-by",
         "cheerio",
-        "superagent",
+        "axios",
         "xml2js"
     ],
     plugins,
